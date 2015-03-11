@@ -1,5 +1,5 @@
 # µStatus
-Minimal status display for OS X tray using psutils and rumps in Python.
+Minimal status display for OS X tray using [psutil](https://github.com/giampaolo/psutil) and [rumps](https://github.com/jaredks/rumps) in Python.
 
 ![Here's what it looks like.](https://i.imgur.com/vknJ13g.png)
 
@@ -8,7 +8,7 @@ _Work in progress, please don't judge._
 ## Installation
 To install dependencies do
 ```bash
-$ sudo pip install psutils rumps
+$ sudo pip install psutil rumps
 ```
 
 The program can then be run via
