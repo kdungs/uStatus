@@ -1,7 +1,7 @@
 # µStatus
 Minimal status display for OS X tray using psutils and rumps in Python.
 
-![Here's what it looks like.][https://i.imgur.com/vknJ13g.png]
+![Here's what it looks like.](https://i.imgur.com/vknJ13g.png)
 
 _Work in progress, please don't judge._
 
