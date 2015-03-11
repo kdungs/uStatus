@@ -18,5 +18,5 @@ $ python ustatus.py
 
 A standalone app version might follow.
 
-## Options
-The program can run in multiple flavours which you can choose by editing `ustatus.py`. When using a `StatusCycler` with a corresponding `rumps.Timer`, each status will be displayed individually for a fixed amount of time. The default setting is a `FormatterComposer` that shows a number of statuses next to each other. It is also possible to just show a single status.
+## Configuration
+You can configure the app to your liking by modifying the call to `configure_app` at the bottom of `ustatus.py`. Since `StatusCollection`s are also `Status`es, you can even nest them, how cool is that? The default set up should already cover most use cases.
