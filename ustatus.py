@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf8
 
-import psutil
-import rumps
-
 
 def default_format(status):
     return '{}: {:3.0f}%'.format(status.name, status.query())
@@ -79,6 +76,7 @@ def set_title(app, title):
 
 
 def configure_app(*statuses, **kwargs):
+    import rumps
     refresh = kwargs.get('refresh', 1)
     composer = kwargs.get('composer', False)
     sc = None
@@ -95,13 +93,10 @@ def configure_app(*statuses, **kwargs):
 
 
 if __name__ == '__main__':
+    import psutil
     configure_app(
-        StatusComposer(
-            Status('CPU', lambda: psutil.cpu_percent()),
-            Status('CPU1', lambda: psutil.cpu_percent(0)),
-            Status('CPU2', lambda: psutil.cpu_percent(1)),
-            separator=', '
-        ),
+        Status('CPU', lambda: psutil.cpu_percent()),
         Status('RAM', lambda: psutil.phymem_usage().percent),
-        Status('Disk /', lambda: psutil.disk_usage('/').percent),
+        composer=True,
+        separator=', '
     ).run()
